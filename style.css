@@ -1,0 +1,85 @@
+/* Reset and base */
+* { box-sizing: border-box; }
+html { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+body { margin: 0; color: #e6e8ee; background: #0b1020; }
+
+/* Soft gradient frame */
+.page-wrap {
+  min-height: 100vh;
+  background:
+    radial-gradient(1100px 500px at 20% 0%, #1a2b6b 0%, rgba(26,43,107,0) 60%),
+    radial-gradient(1100px 500px at 100% 0%, #401a6b 0%, rgba(64,26,107,0) 60%);
+}
+
+/* Top navigation */
+.site-header { position: sticky; top: 0; z-index: 20; }
+.site-nav {
+  background: rgba(12,12,22,0.65);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 60px;
+  max-width: 600px;   /* keeps links grouped tight */
+  margin: 0 auto;     /* centers entire nav horizontally */
+}
+
+.site-nav a {
+  color: #cfe3ff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+.site-nav a.active,
+.site-nav a:hover { background: rgba(207,227,255,0.12); }
+
+/* Page container and headings */
+.container { max-width: 1060px; margin: 0 auto; padding: 24px; }
+main.container { padding-top: 42px; }
+h1 { margin: 0 0 10px; font-size: 40px; }
+h2 { margin: 24px 0 10px; font-size: 26px; }
+h3 { margin: 18px 0 8px; font-size: 20px; }
+p, li { line-height: 1.55; }
+
+/* Card */
+.card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+/* Media sizing (keeps things visible without heavy scrolling) */
+.media-block { display: grid; place-items: center; }
+.media-block img,
+.media-block video {
+  width: 100%;
+  max-width: 560px;        /* normal media size */
+  border-radius: 12px;
+  display: block;
+}
+.media-block.featured img {  
+  max-width: 680px;
+}
+
+/* Video page guardrails */
+.media-block video {
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Lists, rule */
+ul { padding-left: 22px; }
+hr { border: 0; border-top: 1px solid rgba(255,255,255,0.12); margin: 18px 0; }
