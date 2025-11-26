@@ -83,3 +83,37 @@ p, li { line-height: 1.55; }
 /* Lists, rule */
 ul { padding-left: 22px; }
 hr { border: 0; border-top: 1px solid rgba(255,255,255,0.12); margin: 18px 0; }
+/* Project 3 media query 1 */
+@media (max-width: 900px) {
+    body {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+}
+
+/* Project 3 media query 2 */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        padding: 10px 5px;
+    }
+}
