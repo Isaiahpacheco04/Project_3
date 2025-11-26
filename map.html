@@ -29,7 +29,7 @@
 
         <div class="card">
           <div id="map"></div>
-        </section>
+        </div>
       </main>
     </div>
 
@@ -38,7 +38,7 @@
       let map;
 
       function initMap() {
-        const campus = { lat: 41.8349, lng: -87.6270 }; // Illinois Tech
+        const campus = { lat: 41.8349, lng: -87.6270 }; 
 
         map = new google.maps.Map(document.getElementById("map"), {
           center: campus,
@@ -67,6 +67,7 @@
         });
       }
     </script>
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap"></script>
   </body>
 </html>
